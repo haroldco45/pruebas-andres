@@ -39,35 +39,15 @@ const T = {
   okLoad:'Planilla leída: {n} productos. Revise y toque «Publicar».',okSame:'Es la misma planilla, no hay precios nuevos',errFile:'No se pudo leer la planilla. Revise que tenga una columna de Producto y otra de Precio.',
   offline:'Sin internet: se muestran los últimos precios guardados.',gotNew:'Llegaron precios nuevos',upToDate:'Los precios están al día',
   saved:'Guardado',code:'Cód.',made:'Hecho por',waHello:'Hola, le envío la cotización:',libs:'Cargando lector de Excel, intente de nuevo en un momento.',
-  admin:'Administrador',adminT:'¿Administra los precios?',adminP:'Andrés o su secretaria: entre con la clave para subir el Excel y cambiar precios.',pin:'Clave',enter:'Entrar',badPin:'Clave incorrecta',
+  admin:'Administrador',adminT:'¿Administra los precios?',adminP:'Andrés o secretaria: entre con la clave para subir el Excel y cambiar precios.',pin:'Clave',enter:'Entrar',badPin:'Clave incorrecta',
   ownerOn:'Modo administrador activo',exitOwner:'Salir del modo administrador',upload:'Subir Excel',share:'Enviar enlace',
   shareMsg:'Hola, esta es la app con la lista de precios de los negocios. Ábrala y guárdela en la pantalla del celular: ',
   publish:'Publicar',pending:'{n} cambios sin publicar',published:'Publicado: los negocios ya ven los precios nuevos',errPub:'No se pudo publicar. Revise el internet e intente de nuevo.',
   dirtyKeep:'Tiene cambios sin publicar; publíquelos primero.',addP:'Agregar producto',editT:'Cambiar producto',downloadX:'Descargar Excel',
   fName:'Producto',fPrice:'Precio de venta',fCode:'Código',fCat:'Categoría',fUnit:'Unidad',del:'Eliminar producto',delQ:'¿Eliminar este producto de la lista?',
-  needNP:'Escriba el producto y el precio.',expT:'El servicio de esta app venció',expP:'La app dejó de funcionar el {d}. Para seguir usándola, comuníquese con Vibras Positivas HM.',expBtn:'Escribir por WhatsApp',venceSoon:'La app vence el {d}. Comuníquese con Vibras Positivas HM para renovarla.',needLink:'Para ver los precios, abra el enlace de su negocio que le mandó Andrés.',badLink:'Este enlace ya no funciona. Pídale a Andrés el enlace nuevo de su negocio.',shareT:'Enviar enlace a un negocio',shareP:'Cada negocio recibe su propio enlace y solo ve sus precios.',pubFirst:'Publique primero',copy:'Copiar',copied:'Enlace copiado',shareBiz:'Hola, esta es la app con la lista de precios de {b}. Ábrala y guárdela en la pantalla del celular: ',discard:'Descartar cambios',discardQ:'¿Descartar los cambios sin publicar y volver a la lista publicada?',adm:'ADMIN'},
- en: {app:'Prices Today',title:'Andrés’ Stores',update:'Refresh',settings:'Settings',search:'Search product or code…',all:'All',changes:'Changes',
-  products:'products',changed:'changed',newp:'new',loaded:'Prices from',
-  wT:'Store prices, always at hand',wP:'Andrés publishes the price list here. Whenever he changes it, this app updates itself when opened, and it keeps working offline.',
-  noList:'Andrés has not published the price list yet. Tap “Refresh” later.',
-  oT:'Price panel',oP:'Upload the Excel sheet. Check how it looks, tap “Publish” and the stores see it right away with the same link.',
-  s1:'The assistant builds the sheet in Excel with Product and Sale price (one tab per store).',s2:'Tap “Upload Excel” and pick it.',s3:'Tap “Publish” and send the link to the stores on WhatsApp.',
-  demo:'See an example',up:'Up',down:'Down',nw:'New',before:'Before',noRes:'No products match your search.',
-  seeQuote:'See quote',quote:'Quote',items:'products in the quote',send:'Send via WhatsApp',empty:'Clear',add:'Add to quote',remove:'Remove',close:'Close',qty:'Quantity',total:'Total',
-  bizName:'Name shown on this phone',ownerWa:'WhatsApp number for quotes (optional)',waHint:'With country code, e.g. 573001234567. Leave empty and WhatsApp will ask who to send it to.',
-  save:'Save',erase:'Erase data on this phone',eraseQ:'Erase the saved list and quote from this phone?',
-  okLoad:'Sheet read: {n} products. Review it and tap “Publish”.',okSame:'Same sheet, no new prices',errFile:'Could not read the sheet. Make sure it has a Product column and a Price column.',
-  offline:'Offline: showing the last saved prices.',gotNew:'New prices arrived',upToDate:'Prices are up to date',
-  saved:'Saved',code:'Code',made:'Made by',waHello:'Hi, here is the quote:',libs:'Loading the Excel reader, try again in a moment.',
-  admin:'Admin',adminT:'Do you manage the prices?',adminP:'Andrés or his assistant: sign in with the PIN to upload the Excel and change prices.',pin:'PIN',enter:'Sign in',badPin:'Wrong PIN',
-  ownerOn:'Admin mode on',exitOwner:'Leave admin mode',upload:'Upload Excel',share:'Send link',
-  shareMsg:'Hi, this is the app with the store price list. Open it and add it to your home screen: ',
-  publish:'Publish',pending:'{n} unpublished changes',published:'Published: the stores now see the new prices',errPub:'Could not publish. Check the internet and try again.',
-  dirtyKeep:'You have unpublished changes; publish them first.',addP:'Add product',editT:'Edit product',downloadX:'Download Excel',
-  fName:'Product',fPrice:'Sale price',fCode:'Code',fCat:'Category',fUnit:'Unit',del:'Delete product',delQ:'Delete this product from the list?',
-  needNP:'Enter the product and the price.',expT:'This app’s service has expired',expP:'The app stopped working on {d}. To keep using it, contact Vibras Positivas HM.',expBtn:'Message on WhatsApp',venceSoon:'The app expires on {d}. Contact Vibras Positivas HM to renew it.',needLink:'To see prices, open the link for your store that Andrés sent you.',badLink:'This link no longer works. Ask Andrés for your store’s new link.',shareT:'Send link to a store',shareP:'Each store gets its own link and only sees its prices.',pubFirst:'Publish first',copy:'Copy',copied:'Link copied',shareBiz:'Hi, this is the app with the price list for {b}. Open it and add it to your home screen: ',discard:'Discard changes',discardQ:'Discard unpublished changes and go back to the published list?',adm:'ADMIN'}
+  needNP:'Escriba el producto y el costo.',expT:'El servicio de esta app venció',expP:'La app dejó de funcionar el {d}. Para seguir usándola, comuníquese con Vibras Positivas HM.',expBtn:'Escribir por WhatsApp',venceSoon:'La app vence el {d}. Comuníquese con Vibras Positivas HM para renovarla.',needLink:'Para ver los precios, abra el enlace de su negocio que le mandó Andrés.',badLink:'Este enlace ya no funciona. Pídale a Andrés el enlace nuevo de su negocio.',shareT:'Enviar enlace a un negocio',shareP:'Cada negocio recibe su propio enlace y solo ve sus precios.',pubFirst:'Publique primero',copy:'Copiar',copied:'Enlace copiado',shareBiz:'Hola, esta es la app con la lista de precios de {b}. Ábrala y guárdela en la pantalla del celular: ',discard:'Descartar cambios',discardQ:'¿Descartar los cambios sin publicar y volver a la lista publicada?',adm:'ADMIN'}
 };
-const t = k => T[lang][k] ?? k;
+const t = k => (T[lang] && T[lang][k]) || k;
 const money = v => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: v % 1 ? 2 : 0 }).format(v);
 const fmtDate = ms => new Intl.DateTimeFormat(lang === 'es' ? 'es-CO' : 'en-US', { timeZone: 'America/Bogota', dateStyle: 'medium', timeStyle: 'short' }).format(new Date(ms));
 const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date());
@@ -83,8 +63,8 @@ function markDirty() { dirty++; LS.set('pl_dirty', dirty); saveData(); render() 
 function toNum(v) {
   if (typeof v === 'number') return isFinite(v) ? v : null;
   let s = String(v ?? '').replace(/[^\d.,-]/g, ''); if (!s) return null;
-  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, '').replace(',', '.');   // 12.500 / 12.500,50
-  else if (/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');                // 12,500
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, '').replace(',', '.');
+  else if (/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
   else s = s.replace(',', '.');
   const x = parseFloat(s); return isFinite(x) ? x : null;
 }
@@ -123,8 +103,15 @@ function parseRows(rows) {
 function parseWorkbook(wb) {
   const sheets = {}, order = [];
   wb.SheetNames.forEach(sn => {
+    const name = sn.trim();
+    if (!sheets[name]) { sheets[name] = []; order.push(name); }
     const items = parseRows(XLSX.utils.sheet_to_json(wb.Sheets[sn], { header: 1, raw: true, defval: '' }));
-    items.forEach(i => { const k = i.biz || sn.trim(); delete i.biz; if (!sheets[k]) { sheets[k] = []; order.push(k) } sheets[k].push(i) });
+    items.forEach(i => { 
+      const k = i.biz || name; 
+      delete i.biz; 
+      if (!sheets[k]) { sheets[k] = []; if (!order.includes(k)) order.push(k); }
+      sheets[k].push(i);
+    });
   });
   return { sheets, order };
 }
@@ -158,7 +145,6 @@ function downloadXlsx() {
   if (!window.XLSX || !data) { toast(t('libs')); return }
   const wb = XLSX.utils.book_new();
   data.order.forEach(s => {
-    // Agregamos la columna Costo y Precio de Venta
     const rows = [['Código', 'Producto', 'Categoría', 'Unidad', 'Costo', 'Precio de venta']].concat(data.sheets[s].map(i => [i.c, i.n, i.cat, i.u, i.costo || i.p, i.p]));
     const ws = XLSX.utils.aoa_to_sheet(rows); ws['!cols'] = [{ wch: 10 }, { wch: 34 }, { wch: 14 }, { wch: 10 }, { wch: 14 }, { wch: 16 }];
     XLSX.utils.book_append_sheet(wb, ws, s.slice(0, 31));
@@ -223,7 +209,6 @@ function shareLink() {
 
 /* ---------- Ejemplo (solo se ve en este celular) ---------- */
 function demo() {
-  // Ahora la base será: [Código, Nombre, Categoría, Unidad, Costo Base, Precio de Venta Base Anterior]
   const base = [
    ['101','Arroz Diana 500 g','Granos','Unidad',2000,2700],
    ['102','Fríjol bola roja 500 g','Granos','Unidad',5000,6800],
@@ -241,7 +226,6 @@ function demo() {
    ['602','Chocolisto 200 g','Bebidas','Bolsa',4800,6500]
   ];
   
-  // mk(adjRent) asigna una rentabilidad global base
   const mk = rentBase => base.map(r => {
     const costo = r[4];
     const p = Math.round(costo * (1 + rentBase / 100));
@@ -276,19 +260,20 @@ function filtered() {
 function render() {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-t]').forEach(el => el.textContent = t(el.dataset.t));
-  $('#langBtn').textContent = lang === 'es' ? 'EN' : 'ES';
-  $('#bizName').innerHTML = esc(cfg.name || t('title')) + (owner() ? `<span class="badge-own">${t('adm')}</span>` : '');
-  $('#heroBtns').innerHTML = owner()
+  if($('#langBtn')) $('#langBtn').textContent = lang === 'es' ? 'EN' : 'ES';
+  if($('#bizName')) $('#bizName').innerHTML = esc(cfg.name || t('title')) + (owner() ? `<span class="badge-own">${t('adm')}</span>` : '');
+  if($('#heroBtns')) $('#heroBtns').innerHTML = owner()
     ? `<button class="btn btn-main" id="upBtn">${t('upload')}</button><button class="btn btn-ghost" id="shBtn">${t('share')}</button>`
     : `<button class="btn btn-main" id="rfBtn">${t('update')}</button>`;
   if ($('#upBtn')) $('#upBtn').onclick = () => $('#file').click();
   if ($('#shBtn')) $('#shBtn').onclick = shareLink;
   if ($('#rfBtn')) $('#rfBtn').onclick = () => loadRemote(false);
-  $('#meta').textContent = data && data.updatedAt ? `${t('loaded')} ${fmtDate(data.updatedAt)}` : '';
+  if($('#meta')) $('#meta').textContent = data && data.updatedAt ? `${t('loaded')} ${fmtDate(data.updatedAt)}` : '';
   const app = $('#app');
+  if(!app) return;
   const fd = d => new Intl.DateTimeFormat(lang === 'es' ? 'es-CO' : 'en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(d + 'T12:00:00Z'));
   if (remoteMsg === 'expired') {
-    $('#heroBtns').innerHTML = ''; $('#meta').textContent = '';
+    if($('#heroBtns')) $('#heroBtns').innerHTML = ''; if($('#meta')) $('#meta').textContent = '';
     app.innerHTML = `<main><section class="welcome"><h2>${t('expT')}</h2><p>${t('expP').replace('{d}', vence ? fd(vence) : '')}</p>
       <a class="btn btn-main" style="display:inline-block;text-decoration:none;margin-top:16px" href="https://wa.me/573117700431" target="_blank" rel="noopener">${t('expBtn')}</a></section>${footer()}</main>`;
     renderCart(); return;
@@ -355,7 +340,7 @@ function render() {
     });
     if (changed) markDirty(); else toast('Sin cambios');
   };
-  const qi = $('#q'); qi.oninput = () => { st.q = qi.value; $('#list').innerHTML = listHtml(filtered()) + footer(); bindItems() };
+  const qi = $('#q'); if(qi) qi.oninput = () => { st.q = qi.value; $('#list').innerHTML = listHtml(filtered()) + footer(); bindItems() };
   bindItems(); renderCart();
 }
 function listHtml(rows) {
@@ -516,7 +501,7 @@ $('#ov').onclick = e => { if (e.target.id === 'ov') closeSheet() };
 $('#file').onchange = e => { const f = e.target.files[0]; if (f) readFile(f); e.target.value = '' };
 $('#setBtn').onclick = openSettings;
 $('#cartOpen').onclick = openQuote;
-$('#langBtn').onclick = () => { lang = lang === 'es' ? 'en' : 'es'; LS.set('pl_lang', lang); render() };
+if ($('#langBtn')) $('#langBtn').onclick = () => { lang = lang === 'es' ? 'en' : 'es'; LS.set('pl_lang', lang); render() };
 window.addEventListener('offline', () => toast(t('offline')));
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadRemote(true) });
 
