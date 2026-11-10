@@ -158,8 +158,9 @@ function downloadXlsx() {
   if (!window.XLSX || !data) { toast(t('libs')); return }
   const wb = XLSX.utils.book_new();
   data.order.forEach(s => {
-    const rows = [['Código', 'Producto', 'Categoría', 'Unidad', 'Precio de venta']].concat(data.sheets[s].map(i => [i.c, i.n, i.cat, i.u, i.p]));
-    const ws = XLSX.utils.aoa_to_sheet(rows); ws['!cols'] = [{ wch: 10 }, { wch: 34 }, { wch: 14 }, { wch: 10 }, { wch: 16 }];
+    // Agregamos la columna Costo y Precio de Venta
+    const rows = [['Código', 'Producto', 'Categoría', 'Unidad', 'Costo', 'Precio de venta']].concat(data.sheets[s].map(i => [i.c, i.n, i.cat, i.u, i.costo || i.p, i.p]));
+    const ws = XLSX.utils.aoa_to_sheet(rows); ws['!cols'] = [{ wch: 10 }, { wch: 34 }, { wch: 14 }, { wch: 10 }, { wch: 14 }, { wch: 16 }];
     XLSX.utils.book_append_sheet(wb, ws, s.slice(0, 31));
   });
   XLSX.writeFile(wb, `precios-${today()}.xlsx`);
@@ -222,14 +223,41 @@ function shareLink() {
 
 /* ---------- Ejemplo (solo se ve en este celular) ---------- */
 function demo() {
-  const base = [['101','Arroz Diana 500 g','Granos','Unidad',2900,2700],['102','Fríjol bola roja 500 g','Granos','Unidad',6800,6800],['103','Lenteja 500 g','Granos','Unidad',3900,3900],
-   ['201','Aceite Premier 1.000 ml','Aceites','Botella',12500,11900],['202','Aceite Gourmet 900 ml','Aceites','Botella',15900,15900],
-   ['301','Leche Proleche 900 ml','Lácteos','Bolsa',4300,4300],['302','Queso costeño libra','Lácteos','Libra',14000,13000],
-   ['401','Ducales sabor a queso','Galletas','Taco',2600,2600],['402','Saltín Noel 5 tacos','Galletas','Paquete',7200,6900],['403','Galletas Muuu leche','Galletas','Paquete',5800,5800],
-   ['501','Atún Van Camp’s lomitos 160 g','Enlatados','Lata',6900,7200],['502','Salchichas Zenú lata','Enlatados','Lata',5400,5400],
-   ['601','Café Sello Rojo 250 g','Bebidas','Bolsa',11800,10900],['602','Chocolisto 200 g','Bebidas','Bolsa',6500,6500]];
-  const mk = adj => base.map(r => ({ c: r[0], n: r[1], cat: r[2], u: r[3], p: Math.round(r[4] * adj / 100) * 100, prev: r[4] !== r[5] ? Math.round(r[5] * adj / 100) * 100 : undefined }));
-  data = { sheets: { 'Negocio 1': mk(1).concat([{ c: '701', n: 'Panela Doña Pola 500 g', cat: 'Granos', u: 'Unidad', p: 3600, isNew: true }]), 'Negocio 2': mk(1.06) }, order: ['Negocio 1', 'Negocio 2'], file: 'ejemplo', updatedAt: 0 };
+  // Ahora la base será: [Código, Nombre, Categoría, Unidad, Costo Base, Precio de Venta Base Anterior]
+  const base = [
+   ['101','Arroz Diana 500 g','Granos','Unidad',2000,2700],
+   ['102','Fríjol bola roja 500 g','Granos','Unidad',5000,6800],
+   ['103','Lenteja 500 g','Granos','Unidad',3000,3900],
+   ['201','Aceite Premier 1.000 ml','Aceites','Botella',9000,11900],
+   ['202','Aceite Gourmet 900 ml','Aceites','Botella',11500,15900],
+   ['301','Leche Proleche 900 ml','Lácteos','Bolsa',3200,4300],
+   ['302','Queso costeño libra','Lácteos','Libra',10000,13000],
+   ['401','Ducales sabor a queso','Galletas','Taco',1800,2600],
+   ['402','Saltín Noel 5 tacos','Galletas','Paquete',5000,6900],
+   ['403','Galletas Muuu leche','Galletas','Paquete',4000,5800],
+   ['501','Atún Van Camp’s lomitos 160 g','Enlatados','Lata',5000,7200],
+   ['502','Salchichas Zenú lata','Enlatados','Lata',3800,5400],
+   ['601','Café Sello Rojo 250 g','Bebidas','Bolsa',8500,10900],
+   ['602','Chocolisto 200 g','Bebidas','Bolsa',4800,6500]
+  ];
+  
+  // mk(adjRent) asigna una rentabilidad global base
+  const mk = rentBase => base.map(r => {
+    const costo = r[4];
+    const p = Math.round(costo * (1 + rentBase / 100));
+    return { c: r[0], n: r[1], cat: r[2], u: r[3], costo: costo, rent: rentBase, p: p, prev: r[5] !== p ? r[5] : undefined };
+  });
+  
+  data = { 
+    sheets: { 
+      'Negocio 1': mk(45).concat([{ c: '701', n: 'Panela Doña Pola 500 g', cat: 'Granos', u: 'Unidad', costo: 2500, rent: 44, p: 3600, isNew: true }]), 
+      'Negocio 2': mk(35),
+      'Negocio 3': mk(30)
+    }, 
+    order: ['Negocio 1', 'Negocio 2', 'Negocio 3'], 
+    file: 'ejemplo', 
+    updatedAt: 0 
+  };
   st.sheet = 'Negocio 1'; render();
 }
 
